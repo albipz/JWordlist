@@ -22,7 +22,7 @@ public class JWordlist
 		String help = in.nextLine();
 		if(help.equalsIgnoreCase("h"))
 		{
-			System.out.println("Enter the required words, if you want insert more than one, separate them ONLY with commas");
+			System.out.println("Enter the required words, if you want insert more than one separate them ONLY with commas");
 		}
 		System.out.println("");
 		System.out.println("");
