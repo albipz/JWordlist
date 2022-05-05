@@ -27,14 +27,14 @@ public class JWordlist
 		System.out.println("");
 		System.out.println("");
 
-
+	//***********************START DATA ACQUISITION**********************//
 
 		System.out.print("[+]  Name:  ");
 		StringTokenizer name = new StringTokenizer(in.nextLine(), ",");
 
 		while(name.hasMoreTokens())
 		{
-			wordsAcquisition[index++] = (String) name.nextToken().toLowerCase();
+			wordsAcquisition[index++] = (String) name.nextToken().toLowerCase();	//put all the data inserted in the array
 		}
 		System.out.println("");
 
@@ -162,12 +162,15 @@ public class JWordlist
 
 		
 //***********************END DATA ACQUISITION**********************//
+		
+//***********************START COMPUTATION**********************//
 
 		
-		System.arraycopy(wordsAcquisition, 0, list, 0, index);
+		System.arraycopy(wordsAcquisition, 0, list, 0, index);	//put all the inserted data in the final list
 		listIndex = index;
 
-		for(int i=0; i<index; i++)
+		//compute all the possible combinations between the data with for loop
+		for(int i=0; i<index; i++)				
 		{
 			if(specialCharChoice.equalsIgnoreCase("y"))
 			{
@@ -261,7 +264,7 @@ private static String[] resize(String[] oldArray, int elements)
 	
 private static int index = 0;
 private static final int ACQUISITION_LENGTH = 1000;
-private static String[] wordsAcquisition = new String[ACQUISITION_LENGTH];
+private static String[] wordsAcquisition = new String[ACQUISITION_LENGTH];	//array for data acquisistion
 private static final int LIST_LENGTH = 100000;
 private static String[] list = new String[LIST_LENGTH];
 private static int listIndex;
